@@ -1,0 +1,92 @@
+﻿<Window x:Name="RTLS" x:Class="串口调试助手.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:串口调试助手"
+        mc:Ignorable="d"
+        Title="RTLS实时测距系统    V1.0" Height="744.443" Width="1181" Icon="熊猫挠头.jpg" BorderThickness="0" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Color x:Key="Color_gaaa">#FF686767</Color>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="293*"/>
+            <ColumnDefinition Width="880*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas x:Name="地图" HorizontalAlignment="Left" Height="500" Margin="40,0,0,155" VerticalAlignment="Bottom" Width="800" Grid.ColumnSpan="2">
+            <Image x:Name="image_a0" Height="50" Canvas.Left="-25" Canvas.Top="-25" Width="50" Source="雷达.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,500,0,0"/>
+            <Image x:Name="image_a1" Height="50" Canvas.Left="-25" Canvas.Top="-25" Width="50" Source="雷达.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+            <Image x:Name="image_a2" Height="50" Canvas.Left="-25" Canvas.Top="-25" Width="50" Source="雷达.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="800,0,0,0"/>
+            <Image x:Name="image_a3" Height="50" Canvas.Left="-25" Canvas.Top="-25" Width="50" Source="雷达.png" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="800,500,0,0"/>
+            <Image x:Name="image_t0" Height="50" Canvas.Left="-25" Canvas.Top="-25" Width="50" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </Canvas>
+        <Canvas x:Name="基站设置" HorizontalAlignment="Right" Height="210" Margin="0,29,36,0" VerticalAlignment="Top" Width="262" Grid.Column="1">
+            <Border BorderBrush="Black" BorderThickness="1" Height="211" Width="262"/>
+            <Label x:Name="label" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="63" Background="White" Canvas.Left="10" Canvas.Top="-11" Content=" 基站设置"/>
+            <Label x:Name="label1" Content="A0" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.884,0.4" Canvas.Left="20" Canvas.Top="29"/>
+            <Label x:Name="label1_Copy" Content="A1" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.884,0.4" Canvas.Left="20" Canvas.Top="71"/>
+            <Label x:Name="label1_Copy1" Content="A2" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.884,0.4" Canvas.Left="20" Canvas.Top="110"/>
+            <Label x:Name="label1_Copy2" Content="A3" HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="43" RenderTransformOrigin="0.884,0.4" Canvas.Left="20" Canvas.Top="151"/>
+            <TextBox x:Name="a0_x" Height="25" Canvas.Left="63" TextWrapping="Wrap" Canvas.Top="29" Width="45" Text="0"/>
+            <TextBox x:Name="a0_y" Height="25" Canvas.Left="129" TextWrapping="Wrap" Canvas.Top="29" Width="45" Text="0"/>
+            <TextBox x:Name="a0_z" Height="25" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="29" Width="45" Text="0"/>
+            <TextBox x:Name="a1_x" Height="25" Canvas.Left="63" TextWrapping="Wrap" Canvas.Top="71" Width="45" Text="0"/>
+            <TextBox x:Name="a1_y" Height="25" Canvas.Left="129" TextWrapping="Wrap" Canvas.Top="71" Width="45" Text="6"/>
+            <TextBox x:Name="a1_z" Height="25" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="71" Width="45" Text="0"/>
+            <TextBox x:Name="a2_x" Height="25" Canvas.Left="63" TextWrapping="Wrap" Canvas.Top="110" Width="45" Text="9.6"/>
+            <TextBox x:Name="a2_y" Height="25" Canvas.Left="129" TextWrapping="Wrap" Canvas.Top="110" Width="45" Text="6"/>
+            <TextBox x:Name="a2_z" Height="25" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="110" Width="45" Text="0"/>
+            <TextBox x:Name="a3_x" Height="25" Canvas.Left="63" TextWrapping="Wrap" Canvas.Top="151" Width="45" Text="9.6"/>
+            <TextBox x:Name="a3_y" Height="25" Canvas.Left="129" TextWrapping="Wrap" Canvas.Top="151" Width="45" Text="0"/>
+            <TextBox x:Name="a3_z" Height="25" Canvas.Left="196" TextWrapping="Wrap" Canvas.Top="151" Width="45" Text="1"/>
+            <Label x:Name="label2" Content="X" Height="29" Canvas.Left="73" Canvas.Top="181" Width="23"/>
+            <Label x:Name="label2_Copy" Content="Y" Height="29" Canvas.Left="139" Canvas.Top="182" Width="23"/>
+            <Label x:Name="label2_Copy1" Content="Z" Height="29" Canvas.Left="208" Canvas.Top="182" Width="23"/>
+        </Canvas>
+        <Canvas x:Name="控制" HorizontalAlignment="Right" Height="117" Margin="0,264,36,0" VerticalAlignment="Top" Width="262" Grid.Column="1">
+            <Border BorderBrush="Black" BorderThickness="1" Height="117" Width="262"/>
+            <Label x:Name="label_Copy" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="51" Background="White" Canvas.Left="10" Canvas.Top="-13.187" Content="  控制"/>
+            <Button x:Name="button_clr" Content="重置" Height="33" Canvas.Left="35.333" Canvas.Top="17.667" Width="76" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_clr_clicked"/>
+            <Button x:Name="button_apply" Content="应用" Height="33" Canvas.Left="155.333" Canvas.Top="17.667" Width="76" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_apply_clicked"/>
+            <ComboBox x:Name="comboBox" Height="33" Canvas.Left="35.333" Canvas.Top="67.667" Width="76"/>
+            <Button x:Name="button_open" Content="开启" Height="33" Canvas.Left="155.333" Canvas.Top="67.667" Width="76" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_open_clicked"/>
+        </Canvas>
+        <Canvas x:Name="标签位置" Margin="0,395,36,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="206" Width="261" Grid.Column="1">
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="262" Canvas.Top="11"/>
+            <Label x:Name="label3" Content="距离0：" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="49" Canvas.Left="25" Canvas.Top="34"/>
+            <Label x:Name="label3_Copy" Content="距离1：" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="49" Canvas.Left="25" Canvas.Top="68"/>
+            <Label x:Name="label3_Copy1" Content="距离2：" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="49" Canvas.Left="25" Canvas.Top="102"/>
+            <Label x:Name="label3_Copy2" Content="距离3：" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="49" Canvas.Left="25" Canvas.Top="136"/>
+            <Label x:Name="label3_Copy3" Content="坐 标：" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="49" Canvas.Left="25" Canvas.Top="170"/>
+            <Label x:Name="dist0" Content="0" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="120" Canvas.Left="90" Canvas.Top="34"/>
+            <Label x:Name="dist1" Content="0" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="120" Canvas.Left="90" Canvas.Top="68"/>
+            <Label x:Name="dist2" Content="0" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="120" Canvas.Left="90" Canvas.Top="102"/>
+            <Label x:Name="dist3" Content="0" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="120" Canvas.Left="90" Canvas.Top="136"/>
+            <Label x:Name="distf" Content="None" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="147" Canvas.Left="90" Canvas.Top="170"/>
+            <Label x:Name="label_Copy1" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="64" Background="White" Content=" 标签位置" Canvas.Left="10"/>
+            <Label x:Name="label3_Copy4" Content="m" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="36" Canvas.Left="215" Canvas.Top="34"/>
+            <Label x:Name="label3_Copy5" Content="m" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="36" Canvas.Left="215" Canvas.Top="68"/>
+            <Label x:Name="label3_Copy6" Content="m" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="36" Canvas.Left="215" Canvas.Top="102"/>
+            <Label x:Name="label3_Copy7" Content="m" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="36" Canvas.Left="215" Canvas.Top="136"/>
+        </Canvas>
+        <Button x:Name="button_port" Content="调试工具" HorizontalAlignment="Right" Height="50" Margin="0,0,136,15" VerticalAlignment="Bottom" Width="80" Click="Button_port_clicked" Grid.Column="1"/>
+        <Button x:Name="button_map" Content="关于/说明" HorizontalAlignment="Right" Height="50" Margin="0,0,36,15" VerticalAlignment="Bottom" Width="80" Click="Button_map_clicked" Grid.Column="1"/>
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="395.353,0,0,15" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="56.778" Text="83" FontSize="25"/>
+        <Button x:Name="button" Content="画布大小" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="469.686,0,0,15" VerticalAlignment="Bottom" Width="80" Click="Button_bili_clicked"/>
+        <TextBox x:Name="textBox_fix" HorizontalAlignment="Left" Height="50" Margin="22.444,0,0,15" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="73.444" Text="0.45" FontSize="25"/>
+        <Button x:Name="button_fix" Content="天线时延修正" HorizontalAlignment="Left" Height="50" Margin="111.556,0,0,15" VerticalAlignment="Bottom" Width="100" Click="Button_fix_clicked"/>
+        <TextBox x:Name="textBox_x" HorizontalAlignment="Left" Height="50" Margin="96.266,0,0,15" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="40" FontSize="25" Grid.Column="1"/>
+        <TextBox x:Name="textBox_y" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="155.684,0,0,15" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="40" FontSize="25"/>
+        <Button x:Name="button_cal_dist" Content="计算距离" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="271.685,0,0,15" VerticalAlignment="Bottom" Width="80" Click="Button_cal_dist_clicked"/>
+        <TextBox x:Name="textBox_z" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="216.906,0,0,15" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="40" Text="0" FontSize="25"/>
+        <Button x:Name="button_factory" Content="原厂&#xD;&#xA;兼容" HorizontalAlignment="Right" Height="50" Margin="0,0,237,15" VerticalAlignment="Bottom" Width="60" Click="Button_factory_clicked" Grid.Column="1" BorderBrush="#FF707070">
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="textBox_updatetime" HorizontalAlignment="Left" Height="50" Margin="229,0,0,15" TextWrapping="Wrap" Text="500" VerticalAlignment="Bottom" Width="57.602" FontSize="25"/>
+        <Button x:Name="button_flash" Content="刷新时间" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="10,0,0,15" VerticalAlignment="Bottom" Width="62.398" Click="Button_flash_clicked"/>
+
+    </Grid>
+</Window>

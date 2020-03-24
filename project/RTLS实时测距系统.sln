@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RTLS实时测距系统", "RTLS实时测距系统.csproj", "{5518BE4B-A30C-41BC-8687-4BD50BD577B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5518BE4B-A30C-41BC-8687-4BD50BD577B5}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{5518BE4B-A30C-41BC-8687-4BD50BD577B5}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{5518BE4B-A30C-41BC-8687-4BD50BD577B5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{5518BE4B-A30C-41BC-8687-4BD50BD577B5}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5594FD7E-D81D-4BC7-BB70-DA891945B126}
+	EndGlobalSection
+EndGlobal

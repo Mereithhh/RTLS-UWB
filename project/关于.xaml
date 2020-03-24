@@ -1,0 +1,13 @@
+﻿<Window x:Class="串口调试助手.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:串口调试助手"
+        mc:Ignorable="d"
+        Title="关于" Height="450" Width="800" Icon="熊猫挠头.jpg" WindowStartupLocation="CenterScreen">
+    <Canvas HorizontalAlignment="Left" Height="335.564" Margin="49.346,34.09,0,0" VerticalAlignment="Top" Width="337.285">
+        <Image x:Name="image" Height="335.564" Width="336.424" Source="Cache_-e331fdcba223dad..jpg"/>
+        <TextBox Height="34.87" Canvas.Left="365.982" TextWrapping="Wrap" Text="请移步项目地址：https://github.com/cs3cx4g/RTLS-UWB" Canvas.Top="117.129" Width="336.783"/>
+    </Canvas>
+</Window>
