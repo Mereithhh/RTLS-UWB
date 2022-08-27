@@ -12,4 +12,4 @@
 需要`.net 4.0`，但是win10会自动帮你弄。
 
 ## 开发过程和思路
-具体开发过程和使用请移步[个人网站](https://www.mereith.com/post/18/)
+具体开发过程和使用请移步[个人网站](https://www.mereith.com/post/19/)
